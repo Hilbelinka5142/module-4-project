@@ -1,4 +1,17 @@
-from requests import get
+from flask import Flask, render_template
 
-ip = get('https://api.ipify.org').text
-print('My public IP address is: {}'.format(ip))
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    className = 'cnit 381'
+
+    return render_template('index.html', data=className)
+
+@app.route('/about')
+def about():
+    return 'About'
+
+@app.route('/another')
+def another():
+    return 'Another'

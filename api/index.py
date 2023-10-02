@@ -1,7 +1,8 @@
-from requests import get
+from requests import get, render_template
 
 
 def home():
     ip = get('https://api.ipify.org').text
-    return data = print('My public IP address is: {}'.format(ip))
+    data = print('My public IP address is: {}'.format(ip))
+    return data
 

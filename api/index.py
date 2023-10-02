@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -15,3 +16,17 @@ def about():
 @app.route('/another')
 def another():
     return 'Another'
+=======
+from requests import get
+
+
+app = get(__name__)
+
+@app.route('/')
+def home():
+    ip = get('https://api.ipify.org').text
+    return ('My public IP address is: {}'.format(ip))
+
+
+
+>>>>>>> aa434fc333687aa2070aebbc7b286d272665fd4b

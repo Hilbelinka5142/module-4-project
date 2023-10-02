@@ -1,4 +1,4 @@
-from requests import get
+from requests import get, template
 
 app = get(__name__)
 
@@ -6,7 +6,7 @@ app = get(__name__)
 def home():
     ip = get('https://api.ipify.org').text
     data = print('My public IP address is: {}'.format(ip))
-    return data
+    return template('index.html', data)
 
 @app.route('/about')
 def about():

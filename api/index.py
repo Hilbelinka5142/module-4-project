@@ -1,4 +1,4 @@
-from requests import get, 
+from requests import get
 
 app = get(__name__)
 

@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 from requests import get
 
-app = Flask(__name__)
+app = get(__name__)
 
 @app.route('/')
 def home():

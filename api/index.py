@@ -1,4 +1,5 @@
-from requests import get
+from flask import Flask, request
+from request import get
 
 app = get(__name__)
 
@@ -11,4 +12,3 @@ def home():
 @app.route('/about')
 def about():
     return 'about'
-    

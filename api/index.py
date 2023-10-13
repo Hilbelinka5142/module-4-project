@@ -1,6 +1,6 @@
 from flask import Flask
-import request
-from request import get
+import requests
+from requests import get
 
 app = get(__name__)
 
